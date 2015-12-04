@@ -22,7 +22,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="Md5-NG-9Fx" kind="push" id="F0B-P2-4Pe"/>
+                                    <segue destination="Md5-NG-9Fx" kind="push" identifier="showPlayListDetail" id="F0B-P2-4Pe"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -48,9 +48,20 @@
                     <view key="view" contentMode="scaleToFill" id="QaR-nE-FcN">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Play list label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6RK-nf-yh7">
+                                <rect key="frame" x="110" y="278" width="101" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Artist" id="JwQ-dS-R1l"/>
+                    <connections>
+                        <outlet property="playListDetailLabel" destination="6RK-nf-yh7" id="me2-io-2PL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ct6-rJ-yMe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface playListDetailsCtrl : UIViewController
+@property (weak, nonatomic) IBOutlet UILabel *playListDetailLabel;
+@property (weak, nonatomic) NSString *strLabel;
 
 @end
