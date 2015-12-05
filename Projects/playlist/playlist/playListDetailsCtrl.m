@@ -7,6 +7,7 @@
 //
 
 #import "playListDetailsCtrl.h"
+#import "playList.h"
 
 @interface playListDetailsCtrl ()
 
@@ -18,7 +19,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     [self.view setBackgroundColor:[UIColor greenColor]];
-    self.playListDetailLabel.text = self.strLabel;
+    self.playListDetailLabel.text = self.playlist.playListTitle;
+    
+     
+ 
 }
 
 - (void)didReceiveMemoryWarning {

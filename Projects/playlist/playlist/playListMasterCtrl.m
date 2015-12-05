@@ -8,6 +8,7 @@
 
 #import "playListMasterCtrl.h"
 #import "playListDetailsCtrl.h"
+#import "playlist.h"
 
 @interface playListMasterCtrl ()
 
@@ -20,6 +21,11 @@
     // Do any additional setup after loading the view, typically from a nib.
     
     [self.aBtn setTitle:@"Press" forState:(UIControlStateNormal)];
+    
+    playList *play = [[playList alloc] initWithIndex:0];
+    
+    [self.playlistImageView setImage:play.playlistIcon];
+    
 }
 
 - (void)didReceiveMemoryWarning {
@@ -30,6 +36,8 @@
     if([segue.identifier isEqual:@"showPlayListDetail"]){
         NSLog(@"Clicked segue");
         playListDetailsCtrl *playlistdetailsctrl = (playListDetailsCtrl *)segue.destinationViewController;
+        
+        playlistdetailsctrl.playlist = [[playList alloc] initWithIndex:1];
         
         playlistdetailsctrl.strLabel  = @"ganesh";
     }

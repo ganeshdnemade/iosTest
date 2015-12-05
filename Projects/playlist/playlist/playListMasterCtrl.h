@@ -12,6 +12,7 @@
 
 
 @property (weak, nonatomic) IBOutlet UIButton *aBtn;
+@property (weak, nonatomic) IBOutlet UIImageView *playlistImageView;
 
 @end
 

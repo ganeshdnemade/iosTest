@@ -15,6 +15,8 @@
 		0417AFE91C121B5A00F95DEC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0417AFE71C121B5A00F95DEC /* LaunchScreen.xib */; };
 		0417AFF51C121B5A00F95DEC /* playlistTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 0417AFF41C121B5A00F95DEC /* playlistTests.m */; };
 		0417B0001C12216B00F95DEC /* playListDetailsCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 0417AFFF1C12216B00F95DEC /* playListDetailsCtrl.m */; };
+		0417B0031C124CED00F95DEC /* musicLibrary.m in Sources */ = {isa = PBXBuildFile; fileRef = 0417B0021C124CED00F95DEC /* musicLibrary.m */; };
+		0417B0061C12531E00F95DEC /* playList.m in Sources */ = {isa = PBXBuildFile; fileRef = 0417B0051C12531E00F95DEC /* playList.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,10 @@
 		0417AFF41C121B5A00F95DEC /* playlistTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = playlistTests.m; sourceTree = "<group>"; };
 		0417AFFE1C12216B00F95DEC /* playListDetailsCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = playListDetailsCtrl.h; sourceTree = "<group>"; };
 		0417AFFF1C12216B00F95DEC /* playListDetailsCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = playListDetailsCtrl.m; sourceTree = "<group>"; };
+		0417B0011C124CED00F95DEC /* musicLibrary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = musicLibrary.h; sourceTree = "<group>"; };
+		0417B0021C124CED00F95DEC /* musicLibrary.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = musicLibrary.m; sourceTree = "<group>"; };
+		0417B0041C12531E00F95DEC /* playList.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = playList.h; sourceTree = "<group>"; };
+		0417B0051C12531E00F95DEC /* playList.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = playList.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +90,10 @@
 		0417AFD71C121B5A00F95DEC /* playlist */ = {
 			isa = PBXGroup;
 			children = (
+				0417B0041C12531E00F95DEC /* playList.h */,
+				0417B0051C12531E00F95DEC /* playList.m */,
+				0417B0011C124CED00F95DEC /* musicLibrary.h */,
+				0417B0021C124CED00F95DEC /* musicLibrary.m */,
 				0417AFFE1C12216B00F95DEC /* playListDetailsCtrl.h */,
 				0417AFFF1C12216B00F95DEC /* playListDetailsCtrl.m */,
 				0417AFDC1C121B5A00F95DEC /* AppDelegate.h */,
@@ -228,6 +238,8 @@
 				0417B0001C12216B00F95DEC /* playListDetailsCtrl.m in Sources */,
 				0417AFDE1C121B5A00F95DEC /* AppDelegate.m in Sources */,
 				0417AFDB1C121B5A00F95DEC /* main.m in Sources */,
+				0417B0031C124CED00F95DEC /* musicLibrary.m in Sources */,
+				0417B0061C12531E00F95DEC /* playList.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
