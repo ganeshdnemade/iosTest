@@ -39,7 +39,7 @@
         
         playlistdetailsctrl.playlist = [[playList alloc] initWithIndex:1];
         
-        playlistdetailsctrl.strLabel  = @"ganesh";
+        
     }
     
 }

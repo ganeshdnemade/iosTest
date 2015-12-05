@@ -9,9 +9,14 @@
 #import <UIKit/UIKit.h>
 @class playList;
 @interface playListDetailsCtrl : UIViewController
-@property (weak, nonatomic) IBOutlet UILabel *playListDetailLabel;
-@property (weak, nonatomic) NSString *strLabel;
+
+@property (weak, nonatomic) IBOutlet UIImageView *artistImage;
+@property (weak, nonatomic) IBOutlet UILabel *titleArtist;
+@property (weak, nonatomic) IBOutlet UILabel *descriptionArtist;
 
 @property (strong, nonatomic) playList *playlist;
+@property (weak, nonatomic) IBOutlet UILabel *artist1;
+@property (weak, nonatomic) IBOutlet UILabel *artist2;
+@property (weak, nonatomic) IBOutlet UILabel *artist3;
 
 @end

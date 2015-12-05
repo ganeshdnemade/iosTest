@@ -8,6 +8,7 @@
 
 #import "playListDetailsCtrl.h"
 #import "playList.h"
+#import <UIKit/UIKit.h>
 
 @interface playListDetailsCtrl ()
 
@@ -18,11 +19,25 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    [self.view setBackgroundColor:[UIColor greenColor]];
-    self.playListDetailLabel.text = self.playlist.playListTitle;
     
-     
- 
+    if(self.playlist){
+        self.artistImage.image  = self.playlist.playlistIconLarge;
+        self.artistImage.backgroundColor = self.playlist.backgroundColor;
+        self.titleArtist.text = self.playlist.playListTitle;
+        self.descriptionArtist.text = self.playlist.playlistDescription;
+        
+        
+        
+        self.artist1.text = self.playlist.playlistArtists[0];
+        
+        self.artist2.text = self.playlist.playlistArtists[1];
+        
+       // self.artist3.text = self.playlist.playlistArtists[2];
+        
+        
+        
+        
+    }
 }
 
 - (void)didReceiveMemoryWarning {
