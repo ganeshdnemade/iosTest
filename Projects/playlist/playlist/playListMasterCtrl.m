@@ -20,7 +20,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
-    [self.aBtn setTitle:@"Press" forState:(UIControlStateNormal)];
+//    [self.aBtn setTitle:@"Press" forState:(UIControlStateNormal)];
     
     playList *play = [[playList alloc] initWithIndex:0];
     

@@ -18,5 +18,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *artist1;
 @property (weak, nonatomic) IBOutlet UILabel *artist2;
 @property (weak, nonatomic) IBOutlet UILabel *artist3;
+@property (weak, nonatomic) IBOutlet UITableView *artistTable;
 
 @end
