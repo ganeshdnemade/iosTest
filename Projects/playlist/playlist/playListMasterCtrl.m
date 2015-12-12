@@ -24,9 +24,13 @@
     
     playList *play = [[playList alloc] initWithIndex:0];
     
-    [self.playlistImageView setImage:play.playlistIcon];
+     
     
 }
+- (IBAction)showPlayList:(id)sender {
+    [self performSegueWithIdentifier:@"showPlayListSegue" sender:sender];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -34,10 +38,15 @@
 }
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
     if([segue.identifier isEqual:@"showPlayListDetail"]){
-        NSLog(@"Clicked segue");
-        playListDetailsCtrl *playlistdetailsctrl = (playListDetailsCtrl *)segue.destinationViewController;
+        UIImageView *playListImageView =(UIImageView )[sender view];
+        if ([self.playlistImageViews containsObject:playListImageView]) {
+            NSUInteger index=[self.playlistImageViews indexOfObject:playListImageView];
+            playListDetailsCtrl *playListdetailViewController = (playListDetailsCtrl ) segue.destinationViewController;
+            playListdetailViewController.playlist=[[playList alloc]initWithIndex:index];
+            //.playlist=[[Playlist alloc] initWithWhatever:index];
+        }
         
-        playlistdetailsctrl.playlist = [[playList alloc] initWithIndex:1];
+         
         
         
     }

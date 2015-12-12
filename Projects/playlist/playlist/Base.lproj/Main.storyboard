@@ -16,19 +16,35 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="7eO-Wn-FSL">
-                                <rect key="frame" x="60" y="88" width="200" height="200"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7hO-gT-ZTq">
+                                <rect key="frame" x="0.0" y="228" width="170" height="70"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WkM-3M-HXa">
+                                <rect key="frame" x="0.0" y="306" width="170" height="72"/>
+                            </imageView>
+                            <imageView contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="7eO-Wn-FSL">
+                                <rect key="frame" x="8" y="72" width="156" height="148"/>
                                 <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="GBG-AU-sEX" appends="YES" id="Ijx-qT-efE"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.1764705882352941" green="0.18431372549019609" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Playlists" id="XId-mU-1xh"/>
                     <connections>
-                        <outlet property="playlistImageView" destination="7eO-Wn-FSL" id="mo6-47-4f1"/>
+                        <outletCollection property="playlistImageViews" destination="7hO-gT-ZTq" id="M6e-QJ-E4x"/>
+                        <outletCollection property="playlistImageViews" destination="7hO-gT-ZTq" id="aBW-ph-DSh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="GBG-AU-sEX">
+                    <connections>
+                        <action selector="showPlayList:" destination="vXZ-lx-hvc" id="y8H-IQ-kXk"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="715" y="460"/>
         </scene>

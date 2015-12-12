@@ -12,7 +12,7 @@
 
 
 
-@property (weak, nonatomic) IBOutlet UIImageView *playlistImageView;
+@property (strong, nonatomic) IBOutletCollection(UIImageView) NSArray *playlistImageViews;
 
 @end
 
