@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="pWi-LR-rWo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="Nwi-hh-96c">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
@@ -13,7 +13,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="blogCell" textLabel="YFB-1D-c0F" detailTextLabel="NQF-eQ-Qvx" rowHeight="41" style="IBUITableViewCellStyleSubtitle" id="EPX-eo-TtO">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="blogCell" textLabel="YFB-1D-c0F" detailTextLabel="NQF-eQ-Qvx" rowHeight="41" style="IBUITableViewCellStyleSubtitle" id="EPX-eo-TtO">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="EPX-eo-TtO" id="ecb-8S-hEF">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -32,6 +32,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="Eei-oT-dBt" kind="push" identifier="showBlogPost" id="1pP-T7-nSw"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -39,8 +42,55 @@
                             <outlet property="delegate" destination="pWi-LR-rWo" id="6rY-vf-EV3"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="g9t-3s-KHt"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gCc-1w-rLr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="667" y="138"/>
+        </scene>
+        <!--Web View Controller-->
+        <scene sceneID="Y4O-iA-pdj">
+            <objects>
+                <viewController id="Eei-oT-dBt" customClass="WebViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7Db-Ft-CsA"/>
+                        <viewControllerLayoutGuide type="bottom" id="qHS-82-cVZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="0LT-t4-jWC" customClass="Web">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YBl-BI-LXG">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="UdX-6d-Ips"/>
+                    <connections>
+                        <outlet property="webView" destination="YBl-BI-LXG" id="q71-Rw-eU2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Zh-6u-WRh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1195" y="140"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="20O-hY-wns">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Nwi-hh-96c" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KHR-Jf-CMY">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="pWi-LR-rWo" kind="relationship" relationship="rootViewController" id="GnD-UF-39d"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oxf-sq-RC2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="39" y="138"/>
         </scene>

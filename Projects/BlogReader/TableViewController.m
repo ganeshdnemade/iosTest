@@ -8,7 +8,7 @@
 
 #import "TableViewController.h"
 #import "BlogPost.h"
-
+#import "WebViewController.h"
 @interface TableViewController ()
 
 @end
@@ -38,12 +38,14 @@
     
     NSArray *blogPostsArray = [dataDictionary objectForKey:@"posts"];
     
+    //for loop
     for(NSDictionary *bpDictionary in blogPostsArray){
                                    BlogPost *blogPost = [BlogPost blogPostWithTitle:[bpDictionary objectForKey:@"title"]];
                                    blogPost.author = [bpDictionary objectForKey:@"author"];
           blogPost.thumbnail = [bpDictionary objectForKey:@"thumbnail"];
                                    [self.blogPosts addObject:blogPost];
         blogPost.date = [bpDictionary objectForKey:@"date"];
+        blogPost.url = [NSURL URLWithString:[bpDictionary objectForKey:@"url"]];
     }
                                
     
@@ -91,8 +93,28 @@
         cell.imageView.image = [UIImage imageNamed:@"mario.jpg"];
     }
     cell.textLabel.text= blogPost.title;
-    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@",   blogPost.author, blogPost.date];
+    cell.detailTextLabel.text = [NSString stringWithFormat:@"%@ - %@",   blogPost.author, [blogPost formattedDate]];
     return cell;
+}
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
+    
+    NSLog(@"(%@)", segue.identifier);
+    
+    if([segue.identifier isEqual:@"showBlogPost"]){
+        
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        BlogPost *blogPost = [self.blogPosts objectAtIndex:indexPath.row];
+        [segue.destinationViewController setBlogPostURL:blogPost.url];
+    
+        
+        
+        
+        
+        
+    }
+
+    
 }
 
 
@@ -103,6 +125,16 @@
     return YES;
 }
 */
+
+//-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+//    NSLog(@"RowSelected id: %ld", indexPath.row);
+//    BlogPost *blogPost = [self.blogPosts objectAtIndex:indexPath.row];
+//    NSLog(@"%@", blogPost);
+//    UIApplication *application = [UIApplication sharedApplication];
+//    [application openURL:blogPost.url];
+//    
+//}
+
 
 /*
 // Override to support editing the table view.
